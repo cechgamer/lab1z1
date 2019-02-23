@@ -18,7 +18,7 @@ namespace Wcfaritmetica
             obj.numeroA = numero1;
             obj.numeroB = numero2;
             obj.resultado = obj.numeroA + obj.numeroB;
-
+            return obj;
 
         }
     }
