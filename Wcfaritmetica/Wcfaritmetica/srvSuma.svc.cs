@@ -10,24 +10,16 @@ namespace Wcfaritmetica
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
-    public class Service1 : IService1
+    public class srvSuma : IsrvSuma
     {
-        public string GetData(int value)
+        clsSuma IsrvSuma.suma(int numero1, int numero2)
         {
-            return string.Format("You entered: {0}", value);
-        }
+            clsSuma obj = new clsSuma();
+            obj.numeroA = numero1;
+            obj.numeroB = numero2;
+            obj.resultado = obj.numeroA + obj.numeroB;
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+
         }
     }
 }
